@@ -115,7 +115,9 @@ myDateTime = myDate.Date.Add(myTime.TimeOfDay);
 Console.WriteLine("after:\t"+myDateTime);
 ```
 
-这里新建了一个 `myDateTime` 的对象来存储得到的日期数据。
+这里新建了一个 `myDateTime` 的对象来存储得到的日期数据。最后处理完大概是这样的结果
+
+![](./img/日期数据处理结果.png)
 
 ## 数值计算
 
