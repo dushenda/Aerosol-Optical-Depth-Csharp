@@ -1,0 +1,7 @@
+E:\C#Code\WinFormProject\解析路径\bin\Debug\解析路径.exe.config
+E:\C#Code\WinFormProject\解析路径\bin\Debug\解析路径.exe
+E:\C#Code\WinFormProject\解析路径\bin\Debug\解析路径.pdb
+E:\C#Code\WinFormProject\解析路径\obj\Debug\解析路径.csprojAssemblyReference.cache
+E:\C#Code\WinFormProject\解析路径\obj\Debug\解析路径.csproj.CoreCompileInputs.cache
+E:\C#Code\WinFormProject\解析路径\obj\Debug\解析路径.exe
+E:\C#Code\WinFormProject\解析路径\obj\Debug\解析路径.pdb
