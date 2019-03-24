@@ -1,0 +1,10 @@
+E:\C#Code\WinFormProject\DemoField\bin\Release\DemoField.exe.config
+E:\C#Code\WinFormProject\DemoField\bin\Release\DemoField.exe
+E:\C#Code\WinFormProject\DemoField\bin\Release\DemoField.pdb
+E:\C#Code\WinFormProject\DemoField\obj\Release\DemoField.csprojAssemblyReference.cache
+E:\C#Code\WinFormProject\DemoField\obj\Release\DemoField.Form1.resources
+E:\C#Code\WinFormProject\DemoField\obj\Release\DemoField.Properties.Resources.resources
+E:\C#Code\WinFormProject\DemoField\obj\Release\DemoField.csproj.GenerateResource.cache
+E:\C#Code\WinFormProject\DemoField\obj\Release\DemoField.csproj.CoreCompileInputs.cache
+E:\C#Code\WinFormProject\DemoField\obj\Release\DemoField.exe
+E:\C#Code\WinFormProject\DemoField\obj\Release\DemoField.pdb

@@ -1,0 +1,17 @@
+E:\C#Code\WinFormProject\TestCSV\bin\Debug\test.csv
+E:\C#Code\WinFormProject\TestCSV\bin\Debug\TestCSV.exe.config
+E:\C#Code\WinFormProject\TestCSV\bin\Debug\TestCSV.exe
+E:\C#Code\WinFormProject\TestCSV\bin\Debug\TestCSV.pdb
+E:\C#Code\WinFormProject\TestCSV\bin\Debug\CsvHelper.dll
+E:\C#Code\WinFormProject\TestCSV\bin\Debug\System.ValueTuple.dll
+E:\C#Code\WinFormProject\TestCSV\bin\Debug\CsvHelper.xml
+E:\C#Code\WinFormProject\TestCSV\bin\Debug\System.ValueTuple.xml
+E:\C#Code\WinFormProject\TestCSV\obj\Debug\TestCSV.csprojAssemblyReference.cache
+E:\C#Code\WinFormProject\TestCSV\obj\Debug\TestCSV.csproj.CoreCompileInputs.cache
+E:\C#Code\WinFormProject\TestCSV\obj\Debug\TestCSV.csproj.CopyComplete
+E:\C#Code\WinFormProject\TestCSV\obj\Debug\TestCSV.exe
+E:\C#Code\WinFormProject\TestCSV\obj\Debug\TestCSV.pdb
+E:\C#Code\WinFormProject\TestCSV\bin\Debug\20180807.csv
+E:\C#Code\WinFormProject\TestCSV\bin\Debug\20180808.csv
+E:\C#Code\WinFormProject\TestCSV\bin\Debug\test1.csv
+E:\C#Code\WinFormProject\TestCSV\bin\Debug\test2.csv

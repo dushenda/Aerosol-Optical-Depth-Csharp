@@ -1,0 +1,10 @@
+E:\C#Code\WinFormProject\AutoSizeDemo\bin\Debug\AutoSizeDemo.exe.config
+E:\C#Code\WinFormProject\AutoSizeDemo\bin\Debug\AutoSizeDemo.exe
+E:\C#Code\WinFormProject\AutoSizeDemo\bin\Debug\AutoSizeDemo.pdb
+E:\C#Code\WinFormProject\AutoSizeDemo\obj\Debug\AutoSizeDemo.Form1.resources
+E:\C#Code\WinFormProject\AutoSizeDemo\obj\Debug\AutoSizeDemo.Properties.Resources.resources
+E:\C#Code\WinFormProject\AutoSizeDemo\obj\Debug\AutoSizeDemo.csproj.GenerateResource.cache
+E:\C#Code\WinFormProject\AutoSizeDemo\obj\Debug\AutoSizeDemo.csproj.CoreCompileInputs.cache
+E:\C#Code\WinFormProject\AutoSizeDemo\obj\Debug\AutoSizeDemo.exe
+E:\C#Code\WinFormProject\AutoSizeDemo\obj\Debug\AutoSizeDemo.pdb
+E:\C#Code\WinFormProject\AutoSizeDemo\obj\Debug\AutoSizeDemo.csprojAssemblyReference.cache

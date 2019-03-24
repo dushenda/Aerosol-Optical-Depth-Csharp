@@ -1,0 +1,9 @@
+E:\C#Code\WinFormProject\DemoField\bin\Debug\DemoField.exe.config
+E:\C#Code\WinFormProject\DemoField\bin\Debug\DemoField.exe
+E:\C#Code\WinFormProject\DemoField\bin\Debug\DemoField.pdb
+E:\C#Code\WinFormProject\DemoField\obj\Debug\DemoField.Form1.resources
+E:\C#Code\WinFormProject\DemoField\obj\Debug\DemoField.Properties.Resources.resources
+E:\C#Code\WinFormProject\DemoField\obj\Debug\DemoField.csproj.GenerateResource.cache
+E:\C#Code\WinFormProject\DemoField\obj\Debug\DemoField.csproj.CoreCompileInputs.cache
+E:\C#Code\WinFormProject\DemoField\obj\Debug\DemoField.exe
+E:\C#Code\WinFormProject\DemoField\obj\Debug\DemoField.pdb

@@ -1,0 +1,10 @@
+E:\C#Code\WinFormProject\DialogDemo\bin\Release\DialogDemo.exe.config
+E:\C#Code\WinFormProject\DialogDemo\bin\Release\DialogDemo.exe
+E:\C#Code\WinFormProject\DialogDemo\bin\Release\DialogDemo.pdb
+E:\C#Code\WinFormProject\DialogDemo\obj\Release\DialogDemo.csprojAssemblyReference.cache
+E:\C#Code\WinFormProject\DialogDemo\obj\Release\DialogDemo.Form1.resources
+E:\C#Code\WinFormProject\DialogDemo\obj\Release\DialogDemo.Properties.Resources.resources
+E:\C#Code\WinFormProject\DialogDemo\obj\Release\DialogDemo.csproj.GenerateResource.cache
+E:\C#Code\WinFormProject\DialogDemo\obj\Release\DialogDemo.csproj.CoreCompileInputs.cache
+E:\C#Code\WinFormProject\DialogDemo\obj\Release\DialogDemo.exe
+E:\C#Code\WinFormProject\DialogDemo\obj\Release\DialogDemo.pdb

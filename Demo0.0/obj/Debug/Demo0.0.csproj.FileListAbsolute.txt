@@ -1,0 +1,10 @@
+E:\C#Code\WinFormProject\Demo0.0\bin\Debug\Demo0.0.exe.config
+E:\C#Code\WinFormProject\Demo0.0\bin\Debug\Demo0.0.exe
+E:\C#Code\WinFormProject\Demo0.0\bin\Debug\Demo0.0.pdb
+E:\C#Code\WinFormProject\Demo0.0\obj\Debug\Demo0.0.csprojAssemblyReference.cache
+E:\C#Code\WinFormProject\Demo0.0\obj\Debug\Demo0._0.Properties.Resources.resources
+E:\C#Code\WinFormProject\Demo0.0\obj\Debug\Demo0.0.csproj.GenerateResource.cache
+E:\C#Code\WinFormProject\Demo0.0\obj\Debug\Demo0.0.csproj.CoreCompileInputs.cache
+E:\C#Code\WinFormProject\Demo0.0\obj\Debug\Demo0.0.exe
+E:\C#Code\WinFormProject\Demo0.0\obj\Debug\Demo0.0.pdb
+E:\C#Code\WinFormProject\Demo0.0\obj\Debug\Demo0._0.frmEdit.resources

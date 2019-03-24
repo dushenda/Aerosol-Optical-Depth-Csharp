@@ -1,0 +1,9 @@
+E:\C#Code\WinFormProject\TimerDemo\bin\Release\TimerDemo.exe.config
+E:\C#Code\WinFormProject\TimerDemo\bin\Release\TimerDemo.exe
+E:\C#Code\WinFormProject\TimerDemo\bin\Release\TimerDemo.pdb
+E:\C#Code\WinFormProject\TimerDemo\obj\Release\TimerDemo.Form1.resources
+E:\C#Code\WinFormProject\TimerDemo\obj\Release\TimerDemo.Properties.Resources.resources
+E:\C#Code\WinFormProject\TimerDemo\obj\Release\TimerDemo.csproj.GenerateResource.cache
+E:\C#Code\WinFormProject\TimerDemo\obj\Release\TimerDemo.csproj.CoreCompileInputs.cache
+E:\C#Code\WinFormProject\TimerDemo\obj\Release\TimerDemo.exe
+E:\C#Code\WinFormProject\TimerDemo\obj\Release\TimerDemo.pdb

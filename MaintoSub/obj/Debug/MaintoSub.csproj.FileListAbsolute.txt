@@ -1,0 +1,11 @@
+E:\C#Code\WinFormProject\MaintoSub\bin\Debug\MaintoSub.exe.config
+E:\C#Code\WinFormProject\MaintoSub\bin\Debug\MaintoSub.exe
+E:\C#Code\WinFormProject\MaintoSub\bin\Debug\MaintoSub.pdb
+E:\C#Code\WinFormProject\MaintoSub\obj\Debug\MaintoSub.csprojAssemblyReference.cache
+E:\C#Code\WinFormProject\MaintoSub\obj\Debug\MaintoSub.frmMain.resources
+E:\C#Code\WinFormProject\MaintoSub\obj\Debug\MaintoSub.frmSub.resources
+E:\C#Code\WinFormProject\MaintoSub\obj\Debug\MaintoSub.Properties.Resources.resources
+E:\C#Code\WinFormProject\MaintoSub\obj\Debug\MaintoSub.csproj.GenerateResource.cache
+E:\C#Code\WinFormProject\MaintoSub\obj\Debug\MaintoSub.csproj.CoreCompileInputs.cache
+E:\C#Code\WinFormProject\MaintoSub\obj\Debug\MaintoSub.exe
+E:\C#Code\WinFormProject\MaintoSub\obj\Debug\MaintoSub.pdb

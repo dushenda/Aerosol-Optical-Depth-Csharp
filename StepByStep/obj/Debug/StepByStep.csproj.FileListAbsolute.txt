@@ -1,0 +1,7 @@
+E:\C#Code\WinFormProject\StepByStep\bin\Debug\StepByStep.exe.config
+E:\C#Code\WinFormProject\StepByStep\bin\Debug\StepByStep.exe
+E:\C#Code\WinFormProject\StepByStep\bin\Debug\StepByStep.pdb
+E:\C#Code\WinFormProject\StepByStep\obj\Debug\StepByStep.csprojAssemblyReference.cache
+E:\C#Code\WinFormProject\StepByStep\obj\Debug\StepByStep.csproj.CoreCompileInputs.cache
+E:\C#Code\WinFormProject\StepByStep\obj\Debug\StepByStep.exe
+E:\C#Code\WinFormProject\StepByStep\obj\Debug\StepByStep.pdb

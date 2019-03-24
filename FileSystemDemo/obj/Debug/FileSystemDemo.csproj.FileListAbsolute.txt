@@ -1,0 +1,10 @@
+E:\C#Code\WinFormProject\FileSystemDemo\bin\Debug\FileSystemDemo.exe.config
+E:\C#Code\WinFormProject\FileSystemDemo\bin\Debug\FileSystemDemo.exe
+E:\C#Code\WinFormProject\FileSystemDemo\bin\Debug\FileSystemDemo.pdb
+E:\C#Code\WinFormProject\FileSystemDemo\obj\Debug\FileSystemDemo.csprojAssemblyReference.cache
+E:\C#Code\WinFormProject\FileSystemDemo\obj\Debug\FileSystemDemo.frmMain.resources
+E:\C#Code\WinFormProject\FileSystemDemo\obj\Debug\FileSystemDemo.Properties.Resources.resources
+E:\C#Code\WinFormProject\FileSystemDemo\obj\Debug\FileSystemDemo.csproj.GenerateResource.cache
+E:\C#Code\WinFormProject\FileSystemDemo\obj\Debug\FileSystemDemo.csproj.CoreCompileInputs.cache
+E:\C#Code\WinFormProject\FileSystemDemo\obj\Debug\FileSystemDemo.exe
+E:\C#Code\WinFormProject\FileSystemDemo\obj\Debug\FileSystemDemo.pdb

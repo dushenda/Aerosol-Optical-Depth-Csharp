@@ -1,0 +1,10 @@
+E:\C#Code\WinFormProject\TextBoxDemo\bin\Debug\TextBoxDemo.exe.config
+E:\C#Code\WinFormProject\TextBoxDemo\bin\Debug\TextBoxDemo.exe
+E:\C#Code\WinFormProject\TextBoxDemo\bin\Debug\TextBoxDemo.pdb
+E:\C#Code\WinFormProject\TextBoxDemo\obj\Debug\TextBoxDemo.Form1.resources
+E:\C#Code\WinFormProject\TextBoxDemo\obj\Debug\TextBoxDemo.Properties.Resources.resources
+E:\C#Code\WinFormProject\TextBoxDemo\obj\Debug\TextBoxDemo.csproj.GenerateResource.cache
+E:\C#Code\WinFormProject\TextBoxDemo\obj\Debug\TextBoxDemo.csproj.CoreCompileInputs.cache
+E:\C#Code\WinFormProject\TextBoxDemo\obj\Debug\TextBoxDemo.exe
+E:\C#Code\WinFormProject\TextBoxDemo\obj\Debug\TextBoxDemo.pdb
+E:\C#Code\WinFormProject\TextBoxDemo\obj\Debug\TextBoxDemo.csprojAssemblyReference.cache
