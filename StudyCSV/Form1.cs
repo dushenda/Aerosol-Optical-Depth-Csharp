@@ -20,7 +20,7 @@ namespace StudyCSV
             InitializeComponent();
         }
 
-
+        //string[] arrAllFiles;
 
         private void toolStripButton1_Click_1(object sender, EventArgs e)
         {
@@ -42,7 +42,30 @@ namespace StudyCSV
 
             }
         }
-       
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                //string sFileName = choofdlog.FileName;
+                //string[] arrAllFiles = choofdlog.FileNames; //used when Multiselect = true    
+                //string sFileName = openFileDialog1.FileName;     
+                
+                string[] arrAllFiles = openFileDialog1.FileNames;
+                foreach (var file in arrAllFiles)
+                {
+                    Console.WriteLine(file);
+                    string pathName = Path.GetFileNameWithoutExtension(file);
+                    Console.WriteLine(pathName);                    
+                }
+                
+            }
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
     
     

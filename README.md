@@ -8,6 +8,8 @@
 
 1. 完成文件的拼接；
 2. 在文件上面加上文件名限制，作为日期数据导入参与计算；
+   需要解析多文件
+   多文件文件名名转化为各自的日期带入计算
 3. 计算过程需要引入一些特殊的数学函数，要看一下有没有现成的轮子用；
 4. 计算完成数据之后结果进行画图输出（记得是有一个控件可以完成这个功能的）。
 
@@ -39,6 +41,51 @@
   都不用讲了看名字就知道了
 
 要注意，这些方法并不能确定驱动器、目录甚至文件是否存在或者运行于系统中。这些方法仅仅是字符串解析器，只要传递正确的字符串，就能解析出对应的文本。
+
+### 参考
+
+[详情见 MSDN 的 `System.IO.Path` 类下的说明。](https://docs.microsoft.com/zh-cn/dotnet/api/system.io.path?view=netframework-4.7.2)
+
+### 解析多个文件路径
+
+多个文件路径的解析是通过 `openFileDialog` 完成的。看代码
+
+```csharp
+//初始化 openFileDialog 类实例化对象 testDialog 
+//使用 using 可以自动销毁对象
+using (openFileDialog testDialog = new openFileDialog())
+{
+    //设置文全部文件格式都可以选择
+    testDialog.Filter = "All Files (*.*)|*.*";
+    //决定 Filter 决定的顺序从哪里开始，默认是1
+    testDialog.FilterIndex = 1;
+    //可以选择多个文件
+    testDialog.Multiselect = true;
+
+    if(testDialog.ShowDialog() == DiaologResult.OK)
+    {
+        string[] arrAllFiles = testDialog.FileNames;
+    }
+    else
+    {
+        arrAllFiles = string.empty;
+    }
+}
+```
+
+上面的代码可以得到多个文件的路径主要的作用语句就是。
+
+```csharp
+string[] arrAllFiles = terstDialog,FileNames;
+```
+
+FilterIndex  也就指的是下面这个东西。
+
+![](.\img\读取多文件的FilterIndex解释.png)
+
+读取结果也就是像这样，当然这个结果是需要用 `Path` 作解析之后得到的
+
+![](.\img\读取多文件结果.png)
 
 ## 数值计算
 
