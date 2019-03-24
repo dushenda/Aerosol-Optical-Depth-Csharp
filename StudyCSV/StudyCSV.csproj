@@ -51,6 +51,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataTable.cs" />
+    <Compile Include="DataTableMap.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
