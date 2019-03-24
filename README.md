@@ -79,11 +79,11 @@ string[] arrAllFiles = terstDialog,FileNames;
 
 FilterIndex  也就指的是下面这个东西。
 
-![](E:/C%23Code/WinFormProject/img/%E8%AF%BB%E5%8F%96%E5%A4%9A%E6%96%87%E4%BB%B6%E7%9A%84FilterIndex%E8%A7%A3%E9%87%8A.png)
+![](./img/读取多文件的FilterIndex解释.png)
 
 读取结果也就是像这样，当然这个结果是需要用 `Path` 作解析之后得到的
 
-![](E:/C%23Code/WinFormProject/img/%E8%AF%BB%E5%8F%96%E5%A4%9A%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%9C.png)
+![](./img/读取多文件结果.png)
 
 ## 文件的拼接
 
