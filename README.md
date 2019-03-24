@@ -81,11 +81,11 @@ string[] arrAllFiles = terstDialog,FileNames;
 
 FilterIndex  也就指的是下面这个东西。
 
-![](.\img\读取多文件的FilterIndex解释.png)
+![](./img/读取多文件的FilterIndex解释.png)
 
 读取结果也就是像这样，当然这个结果是需要用 `Path` 作解析之后得到的
 
-![](.\img\读取多文件结果.png)
+![](./img/读取多文件结果.png)
 
 ## 数值计算
 
