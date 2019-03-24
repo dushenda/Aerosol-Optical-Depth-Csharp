@@ -64,7 +64,16 @@ namespace StudyCSV
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
-           
+            string date = "20090508";
+            DateTime myDate = DateTime.ParseExact(date, "yyyyMMdd",
+                                        System.Globalization.CultureInfo.InvariantCulture);
+            Console.WriteLine("before:\t"+myDate.ToString());
+            string time = "18:00:45";
+            DateTime myTime = DateTime.ParseExact(time, "HH:mm:ss",
+                                        System.Globalization.CultureInfo.InvariantCulture);
+            DateTime myDateTime = new DateTime();
+            myDateTime = myDate.Date.Add(myTime.TimeOfDay);
+            Console.WriteLine("after:\t"+myDateTime);
         }
     }
     
