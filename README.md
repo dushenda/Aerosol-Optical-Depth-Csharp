@@ -119,6 +119,60 @@ Console.WriteLine("after:\t"+myDateTime);
 
 ![](./img/日期数据处理结果.png)
 
+## 在 WinForm 内实现文件拼接和日期连接
+
+#### 窗口布局和数据读取结果
+
+![](./img/布局和数据读取示意图.png)
+
+#### 处理代码
+
+`openFileDialog1.ShowDialog()` 的方法，此方法是由 `openFileDialog` 继承自 `FileDialog` ，`FileDialog` 继承自 `CommonDialog` 的一个方法。，返回的是 `DialogResult` 方法，如果用户在对话框中单击“确定”，则为 [OK](https://docs.microsoft.com/zh-cn/dotnet/api/system.windows.forms.dialogresult?view=netframework-4.7.2#System_Windows_Forms_DialogResult_OK)；否则为 [Cancel](https://docs.microsoft.com/zh-cn/dotnet/api/system.windows.forms.dialogresult?view=netframework-4.7.2#System_Windows_Forms_DialogResult_Cancel)。
+
+[参考自 MSDN 的 CommonDialog 方法。](https://docs.microsoft.com/zh-cn/dotnet/api/system.windows.forms.commondialog.showdialog?view=netframework-4.7.2)
+
+`arrAllFiles` 直接可以通过 `openDialog` 的 `FileNames` 属性得到，注意不要忘记 `s`。
+
+之后设置列的名字 `setColumName` ，这个是自定义类的一个方法。
+
+然后就是数据流读取数据，处理读入的文件名和时间信息，将其转化为日期格式数据。 `DateTime` 类的 `Date` 实例是读取的文件名转化为时间数据格式的数据，格式是 “yyyyMMdd”。这个转换的来源是从前一条语句的通过 `Path` 类下面的静态方法  `GetFileNameWithoutExtension` 得到的 `FileName`。
+
+之后就连接 CSV 文件进行读取，得到第一列时间数据，转化为 `TimeSpan` （作为两个时间格式数据之间的差值），这里会记录的间隔也就是时间。`Date.Date.Add()` 接收的值的格式为 `TimeSpan` ，返回的是一个对象，其值是此实例所表示的日期和时间与 `value` 所表示的时间间隔之和。也就是日期和时间连接的功能实现了。
+
+至此，也就完成了时间日期读取连接工作。
+
+```csharp
+//打开文件
+if (openFileDialog1.ShowDialog() == DialogResult.OK)
+{
+    string[] arrAllFiles = openFileDialog1.FileNames;
+    foreach (var file in arrAllFiles)
+    {
+
+        //读入数据
+        DataTable.setColumName(dataGridView1);
+        using (var reader = new StreamReader(file))
+            using (var csv = new CsvReader(reader))
+        {
+            string FileName = Path.GetFileNameWithoutExtension(file);
+            DateTime Date = DateTime.ParseExact(FileName, "yyyyMMdd",                                                System.Globalization.CultureInfo.InvariantCulture);
+            csv.Configuration.RegisterClassMap<DataTableMap>();
+            var records = csv.GetRecords<DataTable>();            
+            ///读取数据                     
+            foreach (var record in records)
+            {
+                var Time = TimeSpan.Parse(record.Time);
+                var myDateTime = Date.Date.Add(Time);
+                dataGridView1.Rows.Add(myDateTime, record.Channel1, record.Channel2, 											record.Channel3, record.Channel4, record.Channel5, 
+                                   record.Channel6, record.Channel7, record.Channel8,    										record.ConTem, record.CPUTem, record.EnvTem, record.EnvWet, 								reecord.AirPre);
+            }
+        }
+    }
+}
+```
+
+
+
 ## 数值计算
 
 ## 绘图输出结果

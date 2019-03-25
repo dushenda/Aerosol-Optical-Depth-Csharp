@@ -12,6 +12,7 @@ namespace StudyCSV
     /// </summary>
     public class DataTable
     {
+       // public string Date {get;set;}
         public string Time { get; set; }
         public double Channel1 { get; set; }
         public double Channel2 { get; set; }
@@ -34,7 +35,7 @@ namespace StudyCSV
         public static void setColumName(DataGridView obj)
         {
             obj.ColumnCount = 14;
-            obj.Columns[0].Name = "时间";
+            obj.Columns[0].Name = "测量时间";            
             obj.Columns[1].Name = "通道1";
             obj.Columns[2].Name = "通道2";
             obj.Columns[3].Name = "通道3";
