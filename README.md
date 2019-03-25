@@ -155,7 +155,8 @@ if (openFileDialog1.ShowDialog() == DialogResult.OK)
             using (var csv = new CsvReader(reader))
         {
             string FileName = Path.GetFileNameWithoutExtension(file);
-            DateTime Date = DateTime.ParseExact(FileName, "yyyyMMdd",                                                System.Globalization.CultureInfo.InvariantCulture);
+            DateTime Date = DateTime.ParseExact(FileName, "yyyyMMdd", 
+                                                										                   System.Globalization.CultureInfo.InvariantCulture);
             csv.Configuration.RegisterClassMap<DataTableMap>();
             var records = csv.GetRecords<DataTable>();            
             ///读取数据                     
@@ -163,8 +164,11 @@ if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 var Time = TimeSpan.Parse(record.Time);
                 var myDateTime = Date.Date.Add(Time);
-                dataGridView1.Rows.Add(myDateTime, record.Channel1, record.Channel2, 											record.Channel3, record.Channel4, record.Channel5, 
-                                   record.Channel6, record.Channel7, record.Channel8,    										record.ConTem, record.CPUTem, record.EnvTem, record.EnvWet, 								reecord.AirPre);
+                dataGridView1.Rows.Add(myDateTime, record.Channel1, 
+                 record.Channel2,record.Channel3, record.Channel4, 
+                 record.Channel5,record.Channel6, record.Channel7, 
+                 record.Channel8,record.ConTem, record.CPUTem, 
+                 record.EnvTem, record.EnvWet,reecord.AirPre);
             }
         }
     }
