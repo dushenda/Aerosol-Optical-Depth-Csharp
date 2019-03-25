@@ -156,7 +156,7 @@ if (openFileDialog1.ShowDialog() == DialogResult.OK)
         {
             string FileName = Path.GetFileNameWithoutExtension(file);
             DateTime Date = DateTime.ParseExact(FileName, "yyyyMMdd", 
-                                                										                   System.Globalization.CultureInfo.InvariantCulture);
+             System.Globalization.CultureInfo.InvariantCulture);
             csv.Configuration.RegisterClassMap<DataTableMap>();
             var records = csv.GetRecords<DataTable>();            
             ///读取数据                     
