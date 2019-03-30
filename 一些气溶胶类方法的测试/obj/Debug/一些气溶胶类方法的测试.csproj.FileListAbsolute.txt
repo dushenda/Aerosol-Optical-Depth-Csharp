@@ -1,0 +1,7 @@
+E:\C#Code\WinFormProject\一些气溶胶类方法的测试\bin\Debug\一些气溶胶类方法的测试.exe.config
+E:\C#Code\WinFormProject\一些气溶胶类方法的测试\bin\Debug\一些气溶胶类方法的测试.exe
+E:\C#Code\WinFormProject\一些气溶胶类方法的测试\bin\Debug\一些气溶胶类方法的测试.pdb
+E:\C#Code\WinFormProject\一些气溶胶类方法的测试\obj\Debug\一些气溶胶类方法的测试.csprojAssemblyReference.cache
+E:\C#Code\WinFormProject\一些气溶胶类方法的测试\obj\Debug\一些气溶胶类方法的测试.csproj.CoreCompileInputs.cache
+E:\C#Code\WinFormProject\一些气溶胶类方法的测试\obj\Debug\一些气溶胶类方法的测试.exe
+E:\C#Code\WinFormProject\一些气溶胶类方法的测试\obj\Debug\一些气溶胶类方法的测试.pdb

@@ -47,17 +47,13 @@ namespace StudyCSV
                         foreach (var record in records)
                         {
                             var Time = TimeSpan.Parse(record.Time);
-                            var myDateTime = Date.Date.Add(Time);
-                            //DateTime Time = DateTime.ParseExact(record.Time, "HH:mm:ss",
-                            //            System.Globalization.CultureInfo.InvariantCulture);
-                            //DateTime myDateTime = new DateTime();
-                            //myDateTime = Date.Date.Add(Time.TimeOfDay);
-
+                            var myDateTime = Date.Date.Add(Time);                            
                             dataGridView1.Rows.Add(myDateTime, record.Channel1, record.Channel2, record.Channel3,
                                 record.Channel4, record.Channel5, record.Channel6, record.Channel7, record.Channel8,
                                 record.ConTem, record.CPUTem, record.EnvTem, record.EnvWet, record.AirPre);
-                        }
 
+                        }
+                        
                     }
 
                 }
@@ -67,35 +63,23 @@ namespace StudyCSV
 
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                //string sFileName = choofdlog.FileName;
-                //string[] arrAllFiles = choofdlog.FileNames; //used when Multiselect = true    
-                //string sFileName = openFileDialog1.FileName;     
-
-                string[] arrAllFiles = openFileDialog1.FileNames;
-                foreach (var file in arrAllFiles)
-                {
-                    Console.WriteLine(file);
-                    string pathName = Path.GetFileNameWithoutExtension(file);
-                    Console.WriteLine(pathName);
-                }
-
-            }
+            //AerosolOpticalDepth aerosolOpticalDepth = new AerosolOpticalDepth();
+            //aerosolOpticalDepth.           
+           
         }
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
-            string date = "20090508";
-            DateTime myDate = DateTime.ParseExact(date, "yyyyMMdd",
-                                        System.Globalization.CultureInfo.InvariantCulture);
-            Console.WriteLine("before:\t"+myDate.ToString());
-            string time = "18:00:45";
-            DateTime myTime = DateTime.ParseExact(time, "HH:mm:ss",
-                                        System.Globalization.CultureInfo.InvariantCulture);
-            DateTime myDateTime = new DateTime();
-            myDateTime = myDate.Date.Add(myTime.TimeOfDay);
-            Console.WriteLine("after:\t"+myDateTime);
+            //string date = "20090508";
+            //DateTime myDate = DateTime.ParseExact(date, "yyyyMMdd",
+            //                            System.Globalization.CultureInfo.InvariantCulture);
+            //Console.WriteLine("before:\t"+myDate.ToString());
+            //string time = "18:00:45";
+            //DateTime myTime = DateTime.ParseExact(time, "HH:mm:ss",
+            //                            System.Globalization.CultureInfo.InvariantCulture);
+            //DateTime myDateTime = new DateTime();
+            //myDateTime = myDate.Date.Add(myTime.TimeOfDay);
+            //Console.WriteLine("after:\t"+myDateTime);
         }
     }
     
