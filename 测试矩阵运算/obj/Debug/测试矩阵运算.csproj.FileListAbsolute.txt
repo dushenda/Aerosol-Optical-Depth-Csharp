@@ -1,0 +1,9 @@
+E:\C#Code\WinFormProject\测试矩阵运算\bin\Debug\测试矩阵运算.exe.config
+E:\C#Code\WinFormProject\测试矩阵运算\bin\Debug\测试矩阵运算.exe
+E:\C#Code\WinFormProject\测试矩阵运算\bin\Debug\测试矩阵运算.pdb
+E:\C#Code\WinFormProject\测试矩阵运算\obj\Debug\测试矩阵运算.csprojAssemblyReference.cache
+E:\C#Code\WinFormProject\测试矩阵运算\obj\Debug\Interop.MLApp.dll
+E:\C#Code\WinFormProject\测试矩阵运算\obj\Debug\测试矩阵运算.csproj.ResolveComReference.cache
+E:\C#Code\WinFormProject\测试矩阵运算\obj\Debug\测试矩阵运算.csproj.CoreCompileInputs.cache
+E:\C#Code\WinFormProject\测试矩阵运算\obj\Debug\测试矩阵运算.exe
+E:\C#Code\WinFormProject\测试矩阵运算\obj\Debug\测试矩阵运算.pdb
