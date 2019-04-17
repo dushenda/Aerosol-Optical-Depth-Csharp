@@ -11,8 +11,8 @@ namespace 一些气溶胶类方法的测试
         public static double[] DN0 = new double[] { 63484, 68577, 61448, 57414, 64450, 61584, 92456, 56643 };//定标系数(可以进行修改)
         public DateTime myDateTime; //时间
         public double D_D0;         //日地修正因子
-        public double UT;           //通用时间(Universal Time),h/h
-        public double deltaTTUT;    //TT-UT,deltat/s
+        //public double UT;           //通用时间(Universal Time),h/h
+        //public double deltaTTUT;    //TT-UT,deltat/s
         public double Lonitude;     //经度,theta/rad,[0,2*pi]
         public double Latitude;     //纬度,phi/rad,[-pi/2,pi/2]
         public double Pressure;     //气压,P/atm
@@ -22,6 +22,7 @@ namespace 一些气溶胶类方法的测试
         public double HourAngle;    //时角,H/rad,[-pi,pi]
         public double Zenith;       //天顶角,z/rad,[0,pi]
         public double Azimuth;      //方位角,gamma/rad,[-pi,pi]
+        public double AirMass;      //大气质量
         public double Taug;         //吸收气体透过率
         public double Taur;         //瑞利散射光学厚度
         public double Taero;        //气溶胶光学厚度
@@ -37,7 +38,7 @@ namespace 一些气溶胶类方法的测试
 
         //时间尺度计算(Time scale computation)
         //返回t
-        double getTimeScale(DateTime dateTime)
+        public double getTimeScale(DateTime dateTime)
         {
             int y = dateTime.Year;
             int m = dateTime.Month;
@@ -46,12 +47,13 @@ namespace 一些气溶胶类方法的测试
                 m = m + 12;
                 y = y - 1;
             }
-            double t = (int)(365.25 * (y - 2000)) + (int)(30.6001 * (m + 1)) - (int)(0.01 * y) + 
-                dateTime.Day + dateTime.Hour / 24 - 21958;
+            double t = (int)(365.25 * (y - 2000)) + (int)(30.6001 * (m + 1)) - (int)(0.01 * y) +
+                (double)dateTime.Day + (double)dateTime.Hour / 24 + (double)dateTime.Minute / (24 * 60) +
+                (double)dateTime.Second / (21 * 60 * 60) - 21958;
             return t;
         }
-        
-        //计算时角 H
+
+        //计算时角 H, 使用算法5
         public double getAzenith(double t)
         {
             //常数赋值
@@ -102,36 +104,66 @@ namespace 一些气溶胶类方法的测试
             double seplson = Math.Sin(eplson);
             double ceplson = Math.Sqrt(1 - Math.Pow(seplson, 2));
             //Step11
-            double alpha = Math.Atan2(slambda * clambda, clambda);
+            double alpha = Math.Atan2(slambda * ceplson, clambda);
             //Step12
             if (alpha<0)
             {
                 alpha = alpha + 2 * Math.PI;
             }
+            RightAscension=alpha;
             //Step13
             double delta = Math.Asin(slambda * seplson);
             Declination = delta;
             //Step14
             double H = 1.7528311 + 6.300388099 * t + Lonitude - alpha + 0.92 * deltalambda;
             //Step15
-            H = (H + Math.PI) % (2 * Math.PI) - Math.PI;
+            //取余的时候符号与除数要相等
+            H = (H + Math.PI) % (2 * Math.PI);
+            while (H < 0) { H = H + 2 * Math.PI; }
+            H = H - Math.PI;
             HourAngle = H;
             return H;
         }
+
         //最后一步，计算天顶角z,方位角gamma
-        double getZenith()
-        {            
-            double e0 = Math.Asin(Math.Sin(Latitude) * Math.Sin(Declination) +
-                Math.Cos(Latitude) * Math.Cos(Declination) * Math.Cos(HourAngle));
-            double deltape = -4.26e-5 * Math.Cos(e0);            
-            double gamma = Math.Atan2(Math.Sin(HourAngle), (Math.Cos(HourAngle) * Math.Sin(Latitude) -
-                Math.Tan(Declination) * Math.Cos(Latitude)));
-            Azimuth = gamma;
-            double ep = e0 + deltape;
-            double deltare = (0.08422 * Pressure) / ((273 + Temperature) * Math.Tan(ep + 0.003138 / (ep + 0.8919)));
+        public double getZenith()
+        {
+            //step1
+            double sphi = Math.Sin(Latitude);
+            double cphi = Math.Sqrt(1 - Math.Pow(sphi, 2));
+            //step2
+            double sdelta = Math.Sin(Declination);
+            double cdelta = Math.Sqrt(1 - Math.Pow(sdelta, 2));
+            //step3
+            double sH = Math.Sin(HourAngle);
+            double cH = Math.Cos(HourAngle);
+            //step4
+            double se0 = sphi * sdelta + cphi * cdelta * cH;
+            //setp5
+            double ep = Math.Asin(se0) - 4.26 * 10e-5 * Math.Sqrt(1 - Math.Pow(se0,2));
+            //setp6
+            double Gamma = Math.Atan2(sH, cH * sphi - sdelta * cphi / cdelta);
+            //step7
+            double deltare = 0.08422 * Pressure / (273 + Temperature) / Math.Tan(ep + 0.003138 / (ep + 0.08919));
+            //step8
             double z = Math.PI / 2 - ep - deltare;
             Zenith = z;
+            Azimuth = Gamma;
             return Zenith;
+        }
+
+        public double getAirmass()
+        {
+            double Airmass = Math.Pow(Math.Cos(Zenith) +
+                0.15 * Math.Pow((93.885 - Zenith * 180 / Math.PI), -1.253), -1);
+            AirMass = Airmass;
+            return Airmass;
+        }
+
+        double getTauaero(double DN,double DN0,double m,double D0_D)
+        {
+            
+            return 0.0;
         }
     }
 }

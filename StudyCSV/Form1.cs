@@ -20,7 +20,6 @@ namespace StudyCSV
             InitializeComponent();
         }
 
-        //string[] arrAllFiles;
 
         private void toolStripButton1_Click_1(object sender, EventArgs e)
         {
@@ -41,9 +40,7 @@ namespace StudyCSV
                                         System.Globalization.CultureInfo.InvariantCulture);
                         csv.Configuration.RegisterClassMap<DataTableMap>();
                         var records = csv.GetRecords<DataTable>();
-                        ///<summary>
-                        ///读取数据
-                        ///</summary>           
+                    //读取数据     
                         foreach (var record in records)
                         {
                             var Time = TimeSpan.Parse(record.Time);
@@ -51,9 +48,9 @@ namespace StudyCSV
                             dataGridView1.Rows.Add(myDateTime, record.Channel1, record.Channel2, record.Channel3,
                                 record.Channel4, record.Channel5, record.Channel6, record.Channel7, record.Channel8,
                                 record.ConTem, record.CPUTem, record.EnvTem, record.EnvWet, record.AirPre);
-
+                            
                         }
-                        
+                        Console.WriteLine(123);
                     }
 
                 }
@@ -61,26 +58,17 @@ namespace StudyCSV
            
         }
 
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine("qweryhuigtrb");
+        }
+
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
-            //AerosolOpticalDepth aerosolOpticalDepth = new AerosolOpticalDepth();
-            //aerosolOpticalDepth.           
            
         }
 
-        private void toolStripButton2_Click(object sender, EventArgs e)
-        {
-            //string date = "20090508";
-            //DateTime myDate = DateTime.ParseExact(date, "yyyyMMdd",
-            //                            System.Globalization.CultureInfo.InvariantCulture);
-            //Console.WriteLine("before:\t"+myDate.ToString());
-            //string time = "18:00:45";
-            //DateTime myTime = DateTime.ParseExact(time, "HH:mm:ss",
-            //                            System.Globalization.CultureInfo.InvariantCulture);
-            //DateTime myDateTime = new DateTime();
-            //myDateTime = myDate.Date.Add(myTime.TimeOfDay);
-            //Console.WriteLine("after:\t"+myDateTime);
-        }
+
     }
     
     
