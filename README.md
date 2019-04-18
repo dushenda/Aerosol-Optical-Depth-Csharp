@@ -191,6 +191,62 @@ if (openFileDialog1.ShowDialog() == DialogResult.OK)
 
 今天完成了大气质量的计算，并且对照之前在 MATLAB 上面的程序验证通过，但是输入的数据都是一个个的，封装成了类。所以如何把读入的数据按照一行一行的读入到类中，使用类的函数批处理这些数据也是个问题，现在想到的方法是将其用数组的形式存入属性中，再使用矩阵计算(不知道 C# 中有没有)，再得出处理好的数据进行画图和导出。
 
+### CSV 数据读入和计算
+
+先看一下定义的类和属性就明白怎么写的了。
+
+```csharp
+class AeroOpticalDepth
+    {
+    //仅仅是属性的定义
+        public static double[] DN0 = new double[] { 63484, 68577, 61448, 57414, 64450, 61584, 92456, 56643 };//定标系数(可以进行修改)
+        //public DateTime[] myDateTime; //时间
+        public List<DateTime> myDateTime = new List<DateTime>();
+        public List<double> D_D0;         //日地修正因子
+        //public double UT;           //通用时间(Universal Time),h/h
+        //public double deltaTTUT;    //TT-UT,deltat/s
+        public double Lonitude;     //经度,theta/rad,[0,2*pi]
+        public double Latitude;     //纬度,phi/rad,[-pi/2,pi/2]
+        public List<double> Pressure;     //气压,P/atm
+        public List<double> Temperature;  //气温,T/℃
+        public List<double> RightAscension;//赤经,alpha/rad,[0,2*pi]
+        public List<double> Declination;  //赤纬,delta/rad,[-pi/2,pi/2]
+        public List<double> HourAngle;    //时角,H/rad,[-pi,pi]
+        public List<double> Zenith;       //天顶角,z/rad,[0,pi]
+        public List<double> Azimuth;      //方位角,gamma/rad,[-pi,pi]
+        public List<double> AirMass;      //大气质量
+        //public double Taug;         //吸收气体透过率，这个二不用考虑
+        public List<double> Tautot;       //总的光学厚度
+        public List<double> Taur;         //瑞利散射光学厚度
+        public List<double> Tauaero;        //气溶胶光学厚度
+}
+```
+
+在这里写了一个 `AeroOpticalDepth` 的类来完成这个计算，因为 CSV 读入的都是数组类型的数据，在这里定义其属性为 [`List<>`](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1?view=netframework-4.7.2) 类型，使用这种数据结构的好处是有许多现成的增减方法供直接调用。
+
+再导入了 CSV 的读取数组之后将数据传递到 `List<>` 数据类型的变量中，并且封装在对象中，使用 `foreach` 或者 `for` 循环进行取出计算，在使用 `for` 的时候，次数可以使用 `List<>` 类型的 `Count` 属性获得，实际上这也是一种类，它的构造函数可以由下面这样得到
+
+```csharp
+List<double> zenith = new List<double>();
+```
+
+### 调试
+
+- 调试其实花了绝大部分的时间，首先，C# 的数据类型是十分严格的，要知道每个表达式你要得到的是 `int` 还是 `double` ，在计算 `t` 的时候，我把 `DateTime` 里面的 `Hour` 就直接 ➗ 24，其实这个是个整形的数，所以结果还是整形，得不到正确的结果，在计算前面，需要进行强制类型转化。
+
+- 另一个就是取余的问题，在 MATLAB 里面，取余(取模)是有两个函数的 `mod` 和 `rem` ，`mod` 的余数的符号与除数相同，`rem` 余数的符号与被除数相同。在 C# 里面，使用的是 `%`，余数的符号与被除数的符号相同，其实在这里需要的是与除数符号相同的余数，其实也不难，只需要判断一下，是否这个余数还是小于 0，如果还是小的话，那就加上一个除数，就变成正数了。
+
+  ```
+  double rem(double a,double b)
+  {
+      double c = a%b;
+      if(c<0){c=c+b;}
+      return c;
+  }
+  ```
+
+<--DateTime  2019/4/18 23:17:26-->
+
 ### 数据写入数据库
 
 - 使用 `MySQL` 数据库进行读写数据；
