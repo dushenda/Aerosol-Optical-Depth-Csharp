@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 using System.Windows.Media;
 using CsvHelper;
 using LiveCharts;
@@ -25,6 +26,7 @@ namespace StudyCSV
         List<double> Tauaero_940 = new List<double>();
         List<double> Tauaero_1024 = new List<double>();
         AeroOpticalDepth aeroOpticalDepth = new AeroOpticalDepth();
+
 
         private void toolStripButton1_Click_1(object sender, EventArgs e)
         {

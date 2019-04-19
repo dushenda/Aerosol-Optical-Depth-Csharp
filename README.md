@@ -275,4 +275,8 @@ List<double> zenith = new List<double>();
             myChart.Titles.Add("气溶胶结果反演");
 ```
 
-![](./img/数据与8月8号的结果(全通道).png)
+软件在传递给别人的时候，还需要加上 `CSVHelper`，`Charts` 等的扩展 `.dll` 文件。
+
+![](./img/数据与8月7号的结果(全通道).png)
+
+![数据与8月8号的结果(全通道)](./img/数据与8月8号的结果(全通道).png)
