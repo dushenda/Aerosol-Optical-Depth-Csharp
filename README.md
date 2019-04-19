@@ -249,7 +249,7 @@ List<double> zenith = new List<double>();
 
 今天还是比较开心的，花了一下午搞完了这个计算问题，虽然前面有 MATLAB 版本的计算，明天后天专注于将数据可视化即可😋
 
-### 数据写入数据库
+### 数据写入数据库(暂时未写)
 
 - 使用 `MySQL` 数据库进行读写数据；
 - 写数据库模块；
@@ -259,3 +259,20 @@ List<double> zenith = new List<double>();
 
 ## 绘图输出结果
 
+计算得到 8 月 8 号的数据如下，这个跟用 MATLAB 计算的结果一致，说明软件是正确的。
+
+接下来就是美化工作了。
+
+这里使用的是加入了 Chart 控件，这个控件可以将数据可视化，
+
+主要的代码也就是这一句
+
+```csharp
+  for (int i = 0; i < aeroOpticalDepth.myDateTime.Count; i++)
+            {
+                myChart.Series["λ=864nm"].Points.AddXY(aeroOpticalDepth.myDateTime[i].ToString(), aeroOpticalDepth.Tauaero[i]);
+            }
+            myChart.Titles.Add("气溶胶结果反演");
+```
+
+![](./img/数据与8月8号的结果(全通道).png)

@@ -197,7 +197,7 @@ namespace StudyCSV
 
         //DN0是定标参数，也就是公式的那个常数，DN就是读取的数据的值，lambda是波长(μm),输入nm
         //Height是海拔(Km)
-        public void getTauaero(double DN0,List<double> DNs,double lambda,double Height)
+        public List<double> getTauaero(double DN0,List<double> DNs,double lambda,double Height)
         {
             //计算总的光学厚度
             List<double> TautotL = new List<double>();
@@ -226,6 +226,7 @@ namespace StudyCSV
                 TauaeroL.Add(TauaeroVal);
             }
             Tauaero = TauaeroL;
+            return Tauaero;
         }
     }
 }

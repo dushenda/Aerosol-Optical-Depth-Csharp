@@ -16,3 +16,12 @@ E:\C#Code\WinFormProject\StudyCSV\bin\Debug\System.ValueTuple.xml
 E:\C#Code\WinFormProject\StudyCSV\bin\Debug\test.csv
 E:\C#Code\WinFormProject\StudyCSV\bin\Debug\20180807.csv
 E:\C#Code\WinFormProject\StudyCSV\bin\Debug\20180602.csv
+E:\C#Code\WinFormProject\StudyCSV\bin\Debug\LiveCharts.dll
+E:\C#Code\WinFormProject\StudyCSV\bin\Debug\LiveCharts.WinForms.dll
+E:\C#Code\WinFormProject\StudyCSV\bin\Debug\LiveCharts.Wpf.dll
+E:\C#Code\WinFormProject\StudyCSV\bin\Debug\LiveCharts.pdb
+E:\C#Code\WinFormProject\StudyCSV\bin\Debug\LiveCharts.xml
+E:\C#Code\WinFormProject\StudyCSV\bin\Debug\LiveCharts.WinForms.pdb
+E:\C#Code\WinFormProject\StudyCSV\bin\Debug\LiveCharts.WinForms.xml
+E:\C#Code\WinFormProject\StudyCSV\bin\Debug\LiveCharts.Wpf.pdb
+E:\C#Code\WinFormProject\StudyCSV\bin\Debug\LiveCharts.Wpf.xml

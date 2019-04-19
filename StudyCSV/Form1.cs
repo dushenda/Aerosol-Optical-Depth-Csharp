@@ -1,15 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Media;
 using CsvHelper;
-using CsvHelper.Configuration;
+using LiveCharts;
+using LiveCharts.Defaults;
+using LiveCharts.Wpf;
 
 namespace StudyCSV
 {
@@ -19,7 +16,15 @@ namespace StudyCSV
         {
             InitializeComponent();
         }
-
+        List<double> Tauaero_365 = new List<double>();
+        List<double> Tauaero_412 = new List<double>();
+        List<double> Tauaero_500 = new List<double>();
+        List<double> Tauaero_610 = new List<double>();
+        List<double> Tauaero_675 = new List<double>();
+        List<double> Tauaero_862 = new List<double>();
+        List<double> Tauaero_940 = new List<double>();
+        List<double> Tauaero_1024 = new List<double>();
+        AeroOpticalDepth aeroOpticalDepth = new AeroOpticalDepth();
 
         private void toolStripButton1_Click_1(object sender, EventArgs e)
         {
@@ -55,7 +60,7 @@ namespace StudyCSV
                         List<double> AirPre = new List<double>();
                         const double LonVal = 94.01 * Math.PI / 180;
                         const double LatVal = 40.09 * Math.PI / 180;
-                        AeroOpticalDepth aeroOpticalDepth = new AeroOpticalDepth();
+                        //AeroOpticalDepth aeroOpticalDepth = new AeroOpticalDepth();
                         foreach (var record in records)
                         {
                             var Time = TimeSpan.Parse(record.Time);
@@ -88,7 +93,14 @@ namespace StudyCSV
                         aeroOpticalDepth.getHourAngle(t);
                         zenith = aeroOpticalDepth.getZenith();
                         aeroOpticalDepth.getAirmass();
-                        aeroOpticalDepth.getTauaero(61584, Channel6, 862, 1.2);
+                        Tauaero_365 = aeroOpticalDepth.getTauaero(63484, Channel1, 365, 1.2);
+                        Tauaero_412 = aeroOpticalDepth.getTauaero(68577, Channel2, 412, 1.2);
+                        Tauaero_500 = aeroOpticalDepth.getTauaero(61448, Channel3, 500, 1.2);
+                        Tauaero_610 = aeroOpticalDepth.getTauaero(57414, Channel4, 610, 1.2);
+                        Tauaero_675 = aeroOpticalDepth.getTauaero(64450, Channel5, 675, 1.2);
+                        Tauaero_862 = aeroOpticalDepth.getTauaero(61584, Channel6, 862, 1.2);
+                        Tauaero_940 = aeroOpticalDepth.getTauaero(92457, Channel7, 940, 1.2);
+                        Tauaero_1024 = aeroOpticalDepth.getTauaero(56643, Channel8, 1024, 1.2);
                     }
 
                 }
@@ -98,15 +110,22 @@ namespace StudyCSV
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
+            for (int i = 0; i < aeroOpticalDepth.myDateTime.Count; i++)
+            {
+                myChart.Series["λ=365nm"].Points.AddXY(aeroOpticalDepth.myDateTime[i].ToString(), Tauaero_365[i]);
+                myChart.Series["λ=412nm"].Points.AddXY(aeroOpticalDepth.myDateTime[i].ToString(), Tauaero_412[i]);
+                myChart.Series["λ=500nm"].Points.AddXY(aeroOpticalDepth.myDateTime[i].ToString(), Tauaero_500[i]);
+                myChart.Series["λ=610nm"].Points.AddXY(aeroOpticalDepth.myDateTime[i].ToString(), Tauaero_610[i]);
+                myChart.Series["λ=675nm"].Points.AddXY(aeroOpticalDepth.myDateTime[i].ToString(), Tauaero_675[i]);
+                myChart.Series["λ=864nm"].Points.AddXY(aeroOpticalDepth.myDateTime[i].ToString(), Tauaero_862[i]);
+                myChart.Series["λ=940nm"].Points.AddXY(aeroOpticalDepth.myDateTime[i].ToString(), Tauaero_940[i]);
+                myChart.Series["λ=1024nm"].Points.AddXY(aeroOpticalDepth.myDateTime[i].ToString(), Tauaero_1024[i]);
+
+            }
+            myChart.Titles.Add("气溶胶结果反演");
         }
-
-        private void toolStripButton3_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-
     }
+
+}
     
     
-} 
