@@ -10,7 +10,8 @@ using LiveCharts.Defaults;
 using LiveCharts.Wpf;
 
 namespace StudyCSV
-{
+{   
+
     public partial class Form1 : Form
     {
         public Form1()
@@ -125,6 +126,39 @@ namespace StudyCSV
 
             }
             myChart.Titles.Add("气溶胶结果反演");
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            var fileContent = string.Empty;
+            var filePath = string.Empty;
+            if (diagSaveData.ShowDialog()==DialogResult.OK)
+            {
+                filePath = diagSaveData.FileName;
+                var fileStream = diagSaveData.OpenFile();
+                using (var writer = new StreamWriter(fileStream))
+                using (var csv = new CsvWriter(writer))
+                {
+                    
+                    csv.WriteRecords(aeroOpticalDepth.Tauaero);
+                    //csv.WriteRecords(aeroOpticalDepth.myDateTime);
+                    //csv.WriteRecords(aeroOpticalDepth.Tauaero);
+                    //for (int i = 0; i <aeroOpticalDepth.myDateTime.Count; ii++)
+                    //{
+                    //    csv.WriteRecords(aeroOpticalDepth.myDateTime.AddRange[i]())
+                    //}
+
+            }
+            }
+        }
+
+        private void toolStripButton2_Click_1(object sender, EventArgs e)
+        {            
+            if (diagSaveImg.ShowDialog()==DialogResult.OK)
+            {                
+                myChart.SaveImage(diagSaveImg.FileName,ChartImageFormat.Bmp);
+            }
+            
         }
     }
 

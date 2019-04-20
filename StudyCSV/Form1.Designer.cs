@@ -28,27 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series17 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series18 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series19 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series20 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series21 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series22 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series23 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series24 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series49 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series50 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series51 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series52 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series53 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series54 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series55 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series56 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnDataImport = new System.Windows.Forms.ToolStripButton();
             this.btnCalculate = new System.Windows.Forms.ToolStripButton();
-            this.myChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.myChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.diagSaveData = new System.Windows.Forms.SaveFileDialog();
+            this.diagSaveImg = new System.Windows.Forms.SaveFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.myChart)).BeginInit();
@@ -104,56 +105,74 @@
             this.btnCalculate.Text = "开始处理";
             this.btnCalculate.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(76, 22);
+            this.toolStripButton1.Text = "保存数据";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(76, 22);
+            this.toolStripButton2.Text = "保存图像";
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click_1);
+            // 
             // myChart
             // 
-            chartArea3.Name = "ChartArea1";
-            this.myChart.ChartAreas.Add(chartArea3);
+            chartArea7.Name = "ChartArea1";
+            this.myChart.ChartAreas.Add(chartArea7);
             this.myChart.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend3.Name = "Legend1";
-            this.myChart.Legends.Add(legend3);
+            legend7.Name = "Legend1";
+            this.myChart.Legends.Add(legend7);
             this.myChart.Location = new System.Drawing.Point(0, 0);
             this.myChart.Name = "myChart";
-            series17.ChartArea = "ChartArea1";
-            series17.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series17.Legend = "Legend1";
-            series17.Name = "λ=365nm";
-            series18.ChartArea = "ChartArea1";
-            series18.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series18.Legend = "Legend1";
-            series18.Name = "λ=412nm";
-            series19.ChartArea = "ChartArea1";
-            series19.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series19.Legend = "Legend1";
-            series19.Name = "λ=500nm";
-            series20.ChartArea = "ChartArea1";
-            series20.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series20.Legend = "Legend1";
-            series20.Name = "λ=610nm";
-            series21.ChartArea = "ChartArea1";
-            series21.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series21.Legend = "Legend1";
-            series21.Name = "λ=675nm";
-            series22.ChartArea = "ChartArea1";
-            series22.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series22.Color = System.Drawing.Color.Blue;
-            series22.Legend = "Legend1";
-            series22.Name = "λ=864nm";
-            series23.ChartArea = "ChartArea1";
-            series23.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series23.Legend = "Legend1";
-            series23.Name = "λ=940nm";
-            series24.ChartArea = "ChartArea1";
-            series24.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series24.Legend = "Legend1";
-            series24.Name = "λ=1024nm";
-            this.myChart.Series.Add(series17);
-            this.myChart.Series.Add(series18);
-            this.myChart.Series.Add(series19);
-            this.myChart.Series.Add(series20);
-            this.myChart.Series.Add(series21);
-            this.myChart.Series.Add(series22);
-            this.myChart.Series.Add(series23);
-            this.myChart.Series.Add(series24);
+            series49.ChartArea = "ChartArea1";
+            series49.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series49.Legend = "Legend1";
+            series49.Name = "λ=365nm";
+            series50.ChartArea = "ChartArea1";
+            series50.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series50.Legend = "Legend1";
+            series50.Name = "λ=412nm";
+            series51.ChartArea = "ChartArea1";
+            series51.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series51.Legend = "Legend1";
+            series51.Name = "λ=500nm";
+            series52.ChartArea = "ChartArea1";
+            series52.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series52.Legend = "Legend1";
+            series52.Name = "λ=610nm";
+            series53.ChartArea = "ChartArea1";
+            series53.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series53.Legend = "Legend1";
+            series53.Name = "λ=675nm";
+            series54.ChartArea = "ChartArea1";
+            series54.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series54.Color = System.Drawing.Color.Blue;
+            series54.Legend = "Legend1";
+            series54.Name = "λ=864nm";
+            series55.ChartArea = "ChartArea1";
+            series55.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series55.Legend = "Legend1";
+            series55.Name = "λ=940nm";
+            series56.ChartArea = "ChartArea1";
+            series56.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series56.Legend = "Legend1";
+            series56.Name = "λ=1024nm";
+            this.myChart.Series.Add(series49);
+            this.myChart.Series.Add(series50);
+            this.myChart.Series.Add(series51);
+            this.myChart.Series.Add(series52);
+            this.myChart.Series.Add(series53);
+            this.myChart.Series.Add(series54);
+            this.myChart.Series.Add(series55);
+            this.myChart.Series.Add(series56);
             this.myChart.Size = new System.Drawing.Size(777, 429);
             this.myChart.TabIndex = 2;
             this.myChart.Text = "chart1";
@@ -175,21 +194,9 @@
             this.splitContainer1.SplitterDistance = 663;
             this.splitContainer1.TabIndex = 3;
             // 
-            // toolStripButton1
+            // diagSaveImg
             // 
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(76, 22);
-            this.toolStripButton1.Text = "保存数据";
-            // 
-            // toolStripButton2
-            // 
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(76, 22);
-            this.toolStripButton2.Text = "保存图像";
+            this.diagSaveImg.Filter = "Bmp格式 | *.Bmp |PNG格式 | *.png";
             // 
             // Form1
             // 
@@ -226,6 +233,8 @@
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.SaveFileDialog diagSaveData;
+        private System.Windows.Forms.SaveFileDialog diagSaveImg;
     }
 }
 

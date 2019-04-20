@@ -2,7 +2,6 @@ E:\C#Code\WinFormProject\StudyCSV\bin\Debug\StudyCSV.exe.config
 E:\C#Code\WinFormProject\StudyCSV\bin\Debug\StudyCSV.exe
 E:\C#Code\WinFormProject\StudyCSV\bin\Debug\StudyCSV.pdb
 E:\C#Code\WinFormProject\StudyCSV\obj\Debug\StudyCSV.csprojAssemblyReference.cache
-E:\C#Code\WinFormProject\StudyCSV\obj\Debug\StudyCSV.Form1.resources
 E:\C#Code\WinFormProject\StudyCSV\obj\Debug\StudyCSV.Properties.Resources.resources
 E:\C#Code\WinFormProject\StudyCSV\obj\Debug\StudyCSV.csproj.GenerateResource.cache
 E:\C#Code\WinFormProject\StudyCSV\obj\Debug\StudyCSV.csproj.CoreCompileInputs.cache
@@ -25,3 +24,4 @@ E:\C#Code\WinFormProject\StudyCSV\bin\Debug\LiveCharts.WinForms.pdb
 E:\C#Code\WinFormProject\StudyCSV\bin\Debug\LiveCharts.WinForms.xml
 E:\C#Code\WinFormProject\StudyCSV\bin\Debug\LiveCharts.Wpf.pdb
 E:\C#Code\WinFormProject\StudyCSV\bin\Debug\LiveCharts.Wpf.xml
+E:\C#Code\WinFormProject\StudyCSV\obj\Debug\StudyCSV.Form1.resources

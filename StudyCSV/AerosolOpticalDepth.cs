@@ -204,7 +204,15 @@ namespace StudyCSV
             lambda = lambda / 1000;
             for (int i = 0; i < DNs.Count; i++)
             {
-                double tautot = (Math.Log(DN0) - Math.Log(DNs[i]/D_D0[i])) / AirMass[i];
+                double tautot;
+                if (DNs[i] == 0)
+                {
+                    tautot = 0;
+                }
+                else
+                {
+                    tautot = (Math.Log(DN0) - Math.Log(DNs[i] / D_D0[i])) / AirMass[i];
+                }
                 TautotL.Add(tautot);
             }
             Tautot = TautotL;
